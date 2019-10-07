@@ -1,0 +1,36 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    Création Visiteur
+{% endblock %}
+{% block menu %}
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+    <br/>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Suite</th>
+                <th scope="col">Date</th>
+                <th scope="col">Bien</th>
+                <th scope="col">Visiteur</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for visite in visites %}
+            <tr>
+                <th scope="row">{{ visite.id }}</th>
+                <td>{{ visite.suite }}</td>
+                <td>{{ visite.date|date('d/m/Y') }}</td>
+                <td>{{ visite.bien.localisation }}</td>
+                <td>{{ visite.visiteur.nom }}</td>
+                <td><a href="/visite/delete/{{ visite.id }}"><button type="button" class="btn btn-outline-danger">Supprimer</button></a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+                    
+                    
+{% endblock %}{# empty Twig template #}

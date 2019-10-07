@@ -1,0 +1,20 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    AccueilAdmin
+{% endblock %}
+{% block menu %}
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+
+    
+<center>
+<div class="well">
+    
+    <p><center>Bienvenue à toi {{ app.session.get('login') }} </center></p>
+    
+    
+    
+</div>{# empty Twig template #}
+</center>
+{% endblock %}

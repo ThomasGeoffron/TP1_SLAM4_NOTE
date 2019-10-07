@@ -1,0 +1,50 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    Création Visiteur
+{% endblock %}
+{% block menu %}
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+    <br/>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Type</th>
+                <th scope="col">Nombre de pièces</th>
+                <th scope="col">Nombre de chambres</th>
+                <th scope="col">Superficie</th>
+                <th scope="col">Prix</th>
+                <th scope="col">Chauffage</th>
+                <th scope="col">Année</th>
+                <th scope="col">Localisation</th>
+                <th scope="col">Etat</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for bien in biens %}
+            <tr>
+                <th scope="row">{{ bien.id }}</th>
+                <td>{{ bien.type.libelle }}</td>
+                <td>{{ bien.nbpiece }}</td>
+                <td>{{ bien.nbchambre }}</td>
+                <td>{{ bien.superficie }}</td>
+                <td>{{ bien.prix }}</td>
+                <td>{{ bien.chauffage }}</td>
+                <td>{{ bien.annee }}</td>
+                <td>{{ bien.localisation }}</td>
+                <td>{{ bien.etat }}</td>
+                <td><a href="/bien/update/{{ bien.id }}"><button type="button" class="btn btn-outline-info">Modifier</button></a></td>
+                <td><a href="/bien/delete/{{ bien.id }}"><button type="button" class="btn btn-outline-danger">Supprimer</button></a></td>
+                <td><a href="/bien/afficheType/{{ bien.type.id }}"><button type="button" class="btn btn-outline-warning">Selon Type</button></a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+                    
+                    
+{% endblock %}{# empty Twig template #}

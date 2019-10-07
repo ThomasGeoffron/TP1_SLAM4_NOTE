@@ -1,0 +1,32 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    Création Visiteur
+{% endblock %}
+{% block menu %}
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+    <br/>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Libellé</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for type in types %}
+            <tr>
+                <th scope="row">{{ type.id }}</th>
+                <td>{{ type.libelle }}</td>
+                <td><a href="/type/update/{{ type.id }}"><button type="button" class="btn btn-outline-info">Modifier</button></a></td>
+                <td><a href="/type/delete/{{ type.id }}"><button type="button" class="btn btn-outline-danger">Supprimer</button></a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+                    
+                    
+{% endblock %}{# empty Twig template #}

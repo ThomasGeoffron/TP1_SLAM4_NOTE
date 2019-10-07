@@ -1,0 +1,38 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    Création Visiteur
+{% endblock %}
+{% block menu %}
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+    <br/>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Prénom</th>
+                <th scope="col">Adresse</th>
+                <th scope="col">Téléphone</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for visiteur in visiteurs %}
+            <tr>
+                <th scope="row">{{ visiteur.id }}</th>
+                <td>{{ visiteur.nom }}</td>
+                <td>{{ visiteur.prenom }}</td>
+                <td>{{ visiteur.adresse }}</td>
+                <td>{{ visiteur.telephone }}</td>
+                <td><a href="/visiteur/update/{{ visiteur.id }}"><button type="button" class="btn btn-outline-info">Modifier</button></a></td>
+                <td><a href="/visiteur/delete/{{ visiteur.id }}"><button type="button" class="btn btn-outline-danger">Supprimer</button></a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+                    
+                    
+{% endblock %}

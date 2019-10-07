@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/var/www/html/Immostar/src/Repository/BienRepository.php</file>
+            <file>file:/var/www/html/Immostar/templates/bien/listeBien.html.twig</file>
+            <file>file:/var/www/html/Immostar/templates/bien/bienParType.html.twig</file>
+            <file>file:/var/www/html/Immostar/src/Entity/Bien.php</file>
+            <file>file:/var/www/html/Immostar/templates/visiteur/visiteurUpdate.html.twig</file>
+            <file>file:/var/www/html/Immostar/templates/base.html.twig</file>
+            <file>file:/var/www/html/Immostar/templates/visiteur/listeVisiteur.html.twig</file>
+            <file>file:/var/www/html/Immostar/src/Controller/VisiteurController.php</file>
+            <file>file:/var/www/html/Immostar/src/Form/UpdateVisiteurType.php</file>
+            <file>file:/var/www/html/Immostar/src/Controller/BienController.php</file>
+        </group>
+    </open-files>
+</project-private>
